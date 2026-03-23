@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pankaj Jain, PhD — Scholar · Leader · Author</title>
+<meta name="description" content="Professor Pankaj Jain, PhD — Internationally recognised scholar of Indian Knowledge Systems, Dharma traditions, and global religions. Author of 8 books (Routledge, Springer, Bloomsbury, OUP). Fulbright-Nehru Fellow. Professor & Head of Humanities, FLAME University, Pune.">
+<meta name="keywords" content="Pankaj Jain, FLAME University, Indian Knowledge Systems, Dharma, Fulbright, Scholar, Hinduism, Jainism, Environmental Ethics">
+<meta property="og:title" content="Pankaj Jain, PhD — Scholar · Author · Academic Leader">
+<meta property="og:description" content="Internationally recognised scholar of Indian Knowledge Systems and global religions. Author of 8 books. Fulbright-Nehru Fellow.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='8' fill='%23c8651a'/><text y='.9em' font-size='65' x='50%25' text-anchor='middle' fill='white' font-family='serif' font-style='italic'>J</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1410;
+  --cream: #f7f3ed;
+  --warm: #f0e9df;
+  --saffron: #c8651a;
+  --saffron-light: #e8882a;
+  --gold: #b5952a;
+  --muted: #7a6e65;
+  --border: #ddd5c8;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4rem; background: rgba(247,243,237,0.93); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.nav-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--saffron); }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); transition: all 0.3s; }
+.mobile-menu { display: none; position: fixed; top: 57px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--border); z-index: 199; padding: 1.5rem 2rem; flex-direction: column; gap: 1.2rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+
+/* HERO */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 57px; position: relative; overflow: hidden; }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 5rem 4rem; position: relative; z-index: 2; }
+.hero-eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+.hero-name { font-family: var(--serif); font-size: clamp(3.2rem, 5.5vw, 5.5rem); font-weight: 300; line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 0.3rem; opacity: 0; animation: fadeUp 0.8s 0.35s forwards; }
+.hero-name em { font-style: italic; color: var(--saffron); }
+.hero-phd { font-family: var(--serif); font-size: 1.3rem; font-weight: 300; font-style: italic; color: var(--muted); margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s 0.45s forwards; }
+.hero-bio { font-size: 1rem; line-height: 1.8; color: #4a3f38; max-width: 460px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.55s forwards; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 0.65s forwards; }
+
+/* HERO RIGHT */
+.hero-right { position: relative; display: flex; align-items: flex-end; justify-content: center; background: var(--warm); overflow: hidden; }
+.hero-right::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 30%, rgba(200,101,26,0.13) 0%, transparent 65%); }
+.mandala-bg { position: absolute; width: 520px; height: 520px; opacity: 0.055; animation: slowSpin 60s linear infinite; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.hero-photo-wrap { position: relative; z-index: 2; width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; min-height: 600px; }
+.hero-photo { width: 88%; max-width: 420px; height: 100%; object-fit: cover; object-position: center top; display: block; filter: grayscale(8%) contrast(1.04); opacity: 0; animation: fadeIn 1s 0.7s forwards; }
+.hero-photo-placeholder { width: 88%; max-width: 420px; min-height: 500px; background: linear-gradient(160deg, rgba(200,101,26,0.12) 0%, rgba(200,101,26,0.04) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; opacity: 0; animation: fadeIn 1s 0.7s forwards; border: 1px dashed var(--border); }
+.hero-photo-placeholder span { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; text-align: center; padding: 0 2rem; }
+.hero-photo-caption { position: absolute; bottom: 1.5rem; right: 1.5rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; color: var(--muted); background: rgba(247,243,237,0.85); padding: 0.4rem 0.8rem; }
+
+/* STATS BAR */
+.stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stat-item { padding: 2rem; text-align: center; border-right: 1px solid var(--border); transition: background 0.2s; }
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--warm); }
+.stat-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 300; color: var(--saffron); display: block; line-height: 1; margin-bottom: 0.4rem; }
+.stat-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* BUTTONS */
+.btn-primary { display: inline-block; padding: 0.85rem 2rem; background: var(--saffron); color: white; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+.btn-primary:hover { background: var(--saffron-light); transform: translateY(-1px); }
+.btn-outline { display: inline-block; padding: 0.85rem 2rem; border: 1px solid var(--border); color: var(--ink); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+.btn-outline:hover { border-color: var(--saffron); color: var(--saffron); }
+
+/* MEDIA BAND */
+.media-band { background: var(--ink); padding: 2rem 4rem; display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; justify-content: center; }
+.media-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); flex-shrink: 0; }
+.media-outlets { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: center; }
+.media-outlet { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; transition: color 0.2s; white-space: nowrap; text-decoration: none; }
+.media-outlet:hover { color: var(--saffron-light); }
+
+/* QUOTE BAND */
+.quote-band { background: var(--saffron); padding: 4.5rem 4rem; text-align: center; position: relative; overflow: hidden; }
+.quote-band blockquote { font-family: var(--serif); font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 300; font-style: italic; color: white; max-width: 820px; margin: 0 auto; line-height: 1.5; position: relative; }
+.quote-band blockquote::before { content: '\201C'; font-size: 6rem; line-height: 0; position: absolute; top: 1.5rem; left: -3.5rem; opacity: 0.22; font-family: var(--serif); }
+
+/* SECTIONS */
+.section-wrap { padding: 6rem 4rem; max-width: 1200px; margin: 0 auto; }
+.section-divider { height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); margin: 0 4rem; }
+.section-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1rem; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.15; margin-bottom: 3rem; color: var(--ink); }
+
+/* VISION */
+.vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+.vision-text { font-family: var(--serif); font-size: 1.25rem; font-weight: 300; line-height: 1.8; color: #3a3028; font-style: italic; }
+.vision-pillars { display: flex; flex-direction: column; gap: 1.2rem; }
+.pillar { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.2rem; background: var(--warm); border-left: 3px solid var(--saffron); opacity: 0; transform: translateX(20px); transition: opacity 0.5s, transform 0.5s; }
+.pillar.visible { opacity: 1; transform: translateX(0); }
+.pillar-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; }
+.pillar-name { font-weight: 500; font-size: 0.9rem; margin-bottom: 0.2rem; }
+.pillar-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before { content: ''; position: absolute; left: 0; top: 0.5rem; bottom: 0; width: 1px; background: var(--border); }
+.timeline-item { position: relative; margin-bottom: 3rem; padding-left: 2rem; opacity: 0; transform: translateX(-10px); transition: opacity 0.6s, transform 0.6s; }
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+.timeline-item::before { content: ''; position: absolute; left: -2rem; top: 0.45rem; width: 9px; height: 9px; border-radius: 50%; background: var(--saffron); border: 2px solid var(--cream); outline: 1px solid var(--saffron); }
+.timeline-date { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+.timeline-role { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; color: var(--ink); margin-bottom: 0.2rem; }
+.timeline-place { font-size: 0.85rem; color: var(--saffron); font-weight: 500; margin-bottom: 0.75rem; letter-spacing: 0.03em; }
+.timeline-desc { font-size: 0.92rem; color: #5a5048; line-height: 1.7; }
+
+/* AWARDS */
+.awards-section { background: var(--warm); padding: 6rem 4rem; }
+.awards-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 0; }
+.award-card { background: var(--cream); padding: 2rem 1.75rem; opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s, background 0.2s; }
+.award-card.visible { opacity: 1; transform: translateY(0); }
+.award-card:hover { background: white; }
+.award-year { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.15em; color: var(--saffron); margin-bottom: 0.5rem; }
+.award-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.3rem; line-height: 1.3; }
+.award-body { font-size: 0.8rem; color: var(--muted); }
+
+/* BOOKS */
+.books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; }
+.book-card { background: var(--warm); padding: 1.75rem 1.5rem; border-left: 3px solid transparent; opacity: 0; transform: translateY(15px); transition: opacity 0.5s, transform 0.5s, border-color 0.2s; }
+.book-card.visible { opacity: 1; transform: translateY(0); }
+.book-card:hover { border-left-color: var(--saffron); }
+.book-publisher { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--saffron); margin-bottom: 0.6rem; }
+.book-title { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; font-style: italic; line-height: 1.4; color: var(--ink); margin-bottom: 0.4rem; }
+.book-year { font-size: 0.78rem; color: var(--muted); }
+.forthcoming-badge { display: inline-block; background: var(--gold); color: white; font-size: 0.6rem; font-family: var(--mono); letter-spacing: 0.1em; padding: 0.15rem 0.5rem; margin-left: 0.4rem; vertical-align: middle; text-transform: uppercase; }
+
+/* EXPERTISE */
+.expertise-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.expertise-item { background: var(--cream); padding: 2rem; transition: background 0.2s; }
+.expertise-item:hover { background: var(--warm); }
+.expertise-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
+.expertise-name { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--ink); margin-bottom: 0.4rem; }
+.expertise-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+/* PROFILES */
+.profiles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+.profile-link { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; background: var(--warm); border: 1px solid transparent; text-decoration: none; color: var(--ink); transition: border-color 0.2s, transform 0.2s; }
+.profile-link:hover { border-color: var(--saffron); transform: translateX(4px); }
+.profile-link-icon { width: 36px; height: 36px; background: var(--ink); color: white; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; font-family: var(--mono); }
+.profile-link-text { font-size: 0.85rem; font-weight: 500; }
+.profile-link-sub { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+
+/* CONTACT */
+.contact-section { background: var(--ink); color: white; padding: 6rem 4rem; text-align: center; position: relative; overflow: hidden; }
+.contact-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(200,101,26,0.2) 0%, transparent 60%); }
+.contact-section .section-label { color: var(--saffron-light); }
+.contact-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; position: relative; color: white; max-width: 700px; margin: 0 auto 1.5rem; }
+.contact-email { font-family: var(--serif); font-size: 1.5rem; font-style: italic; color: var(--saffron-light); text-decoration: none; display: inline-block; margin-bottom: 3rem; position: relative; transition: color 0.2s; cursor: pointer; }
+.contact-email:hover { color: white; }
+.footer-langs { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.lang-badge { padding: 0.3rem 0.9rem; border: 1px solid rgba(255,255,255,0.2); font-size: 0.72rem; font-family: var(--mono); letter-spacing: 0.1em; color: rgba(255,255,255,0.7); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.78rem; color: rgba(255,255,255,0.4); font-family: var(--mono); letter-spacing: 0.05em; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes slowSpin { from { transform:translate(-50%,-50%) rotate(0deg); } to { transform:translate(-50%,-50%) rotate(360deg); } }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 450px; }
+  .hero-left { padding: 4rem 1.5rem 2rem; }
+  .section-wrap { padding: 4rem 1.5rem; }
+  .awards-section { padding: 4rem 1.5rem; }
+  .awards-grid { grid-template-columns: 1fr 1fr; }
+  .expertise-grid { grid-template-columns: 1fr 1fr; }
+  .vision-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .media-band { padding: 2rem 1.5rem; gap: 1.5rem; }
+  .quote-band { padding: 3rem 1.5rem; }
+  .quote-band blockquote::before { display: none; }
+  .contact-section { padding: 4rem 1.5rem; }
+  .stats-bar { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .awards-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">Pankaj Jain, PhD</a>
+  <ul class="nav-links">
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#books">Books</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#profiles">Profiles</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#vision" onclick="closeMenu()">Vision</a>
+  <a href="#leadership" onclick="closeMenu()">Leadership</a>
+  <a href="#books" onclick="closeMenu()">Books</a>
+  <a href="#awards" onclick="closeMenu()">Awards</a>
+  <a href="#profiles" onclick="closeMenu()">Profiles</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Scholar &nbsp;·&nbsp; Author &nbsp;·&nbsp; Academic Leader</p>
+    <h1 class="hero-name">Pankaj<br><em>Jain</em></h1>
+    <p class="hero-phd">PhD · Fulbright-Nehru Fellow</p>
+    <p class="hero-bio">Internationally recognised scholar with 30+ years in higher education across India and the USA. Professor &amp; Head of Humanities at FLAME University, Pune. Director, India Centre, FLAME University. Visiting Faculty, University of North Texas. Author of 8 books with Oxford University Press, Routledge, Springer, and Bloomsbury.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <a href="https://scholar.google.com/citations?user=nJ0N7xoAAAAJ" target="_blank" rel="noopener" class="btn-outline">Google Scholar</a>
+      <a href="https://linktr.ee/ProfPankajJain" target="_blank" rel="noopener" class="btn-outline">All Profiles</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <svg class="mandala-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="190" stroke="#c8651a" stroke-width="1"/>
+      <circle cx="200" cy="200" r="150" stroke="#c8651a" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="110" stroke="#c8651a" stroke-width="1"/>
+      <circle cx="200" cy="200" r="70" stroke="#c8651a" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="30" stroke="#c8651a" stroke-width="1"/>
+      <line x1="200" y1="10" x2="200" y2="390" stroke="#c8651a" stroke-width="0.5"/>
+      <line x1="10" y1="200" x2="390" y2="200" stroke="#c8651a" stroke-width="0.5"/>
+      <line x1="65" y1="65" x2="335" y2="335" stroke="#c8651a" stroke-width="0.5"/>
+      <line x1="335" y1="65" x2="65" y2="335" stroke="#c8651a" stroke-width="0.5"/>
+      <polygon points="200,30 370,150 370,250 200,370 30,250 30,150" stroke="#c8651a" stroke-width="0.5" fill="none"/>
+    </svg>
+    <div class="hero-photo-wrap">
+      <!-- 
+        PHOTO SETUP INSTRUCTIONS:
+        1. Save your photo as "photo.jpg" in the same folder as this index.html
+        2. Replace the placeholder div below with:
+           <img class="hero-photo" src="photo.jpg" alt="Professor Pankaj Jain">
+        3. Commit both files to the repository
+      -->
+      <div class="hero-photo-placeholder">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <circle cx="30" cy="22" r="12" stroke="#c8651a" stroke-width="1.5" opacity="0.4"/>
+          <path d="M8 52 Q30 38 52 52" stroke="#c8651a" stroke-width="1.5" fill="none" opacity="0.4"/>
+        </svg>
+        <span>Add photo.jpg to the repository<br>and replace this placeholder</span>
+      </div>
+      <p class="hero-photo-caption">FLAME University · Pune</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">30+</span>
+    <span class="stat-label">Years in Academia</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">8</span>
+    <span class="stat-label">Books Published</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">4</span>
+    <span class="stat-label">Global Publishers</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">2</span>
+    <span class="stat-label">Countries · India & USA</span>
+  </div>
+</div>
+
+<!-- MEDIA BAND -->
+<div class="media-band">
+  <span class="media-label">Featured In</span>
+  <div class="media-outlets">
+    <span class="media-outlet">BBC</span>
+    <span class="media-outlet">Times of India</span>
+    <span class="media-outlet">The Hindu</span>
+    <span class="media-outlet">Hindustan Times</span>
+    <span class="media-outlet">Deccan Herald</span>
+    <span class="media-outlet">India Today</span>
+  </div>
+</div>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <blockquote>
+    Bridging ancient wisdom and contemporary scholarship — illuminating the living traditions of dharma for a global audience.
+  </blockquote>
+</div>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="section-wrap">
+    <p class="section-label">Vision & Philosophy</p>
+    <h2 class="section-title">Scholarship at the Intersection<br>of Tradition & Modernity</h2>
+    <div class="vision-grid">
+      <div class="vision-text">
+        My work seeks to recover the depth and relevance of Indian Knowledge Systems — from Dharmic ethics and environmental philosophy to the living practices of Jainism, Hinduism, and allied traditions — and to bring these into dialogue with contemporary global challenges.
+      </div>
+      <div class="vision-pillars">
+        <div class="pillar">
+          <span class="pillar-icon">🪔</span>
+          <div>
+            <div class="pillar-name">Dharmic Ethics</div>
+            <div class="pillar-desc">Exploring the ethical dimensions of Dharma traditions across Hinduism, Jainism, and Buddhism in a cross-cultural frame.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🌿</span>
+          <div>
+            <div class="pillar-name">Environmental Philosophy</div>
+            <div class="pillar-desc">Recovering indigenous ecological wisdom as a resource for contemporary environmental thought and practice.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">📚</span>
+          <div>
+            <div class="pillar-name">Global Religions</div>
+            <div class="pillar-desc">Comparative study of world religions with a focus on lived traditions, ritual, and community across cultures.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🎓</span>
+          <div>
+            <div class="pillar-name">Academic Leadership</div>
+            <div class="pillar-desc">Building institutions and curricula that honour India's intellectual heritage while engaging global conversations.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- LEADERSHIP / TIMELINE -->
+<section id="leadership">
+  <div class="section-wrap">
+    <p class="section-label">Academic Leadership</p>
+    <h2 class="section-title">Career & Positions</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2015 — Present</div>
+        <div class="timeline-role">Professor & Head of Humanities</div>
+        <div class="timeline-place">FLAME University, Pune</div>
+        <div class="timeline-desc">Leading the Humanities division and serving as Director of the India Centre. Designing interdisciplinary curricula integrating Indian Knowledge Systems with liberal arts education.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2015 — Present</div>
+        <div class="timeline-role">Director, India Centre</div>
+        <div class="timeline-place">FLAME University, Pune</div>
+        <div class="timeline-desc">Founding and directing the India Centre, fostering research and public engagement on Indian civilisational thought, culture, and policy.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2001 — 2015</div>
+        <div class="timeline-role">Faculty, Philosophy & Religion</div>
+        <div class="timeline-place">University of North Texas, USA</div>
+        <div class="timeline-desc">Teaching and research across comparative religion, Hindu studies, environmental ethics, and Indian philosophy. Fulbright-Nehru Fellowship awarded during this period.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Ongoing</div>
+        <div class="timeline-role">Fulbright-Nehru Senior Fellow</div>
+        <div class="timeline-place">US-India Educational Foundation</div>
+        <div class="timeline-desc">Recognised for distinguished contributions to academic exchange between India and the United States in the field of humanities and religion.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- BOOKS -->
+<section id="books">
+  <div class="section-wrap">
+    <p class="section-label">Publications</p>
+    <h2 class="section-title">Books & Monographs</h2>
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-publisher">Routledge</div>
+        <div class="book-title">Dharma and Ecology of Hindu Communities</div>
+        <div class="book-year">2011</div>
+      </div>
+      <div class="book-card">
+        <div class="book-publisher">Springer</div>
+        <div class="book-title">Science and Socioeconomics of Biodiversity</div>
+        <div class="book-year">2014</div>
+      </div>
+      <div class="book-card">
+        <div class="book-publisher">Bloomsbury</div>
+        <div class="book-title">Dharma: The Hindu, Jain, Buddhist and Sikh Traditions of India</div>
+        <div class="book-year">2020</div>
+      </div>
+      <div class="book-card">
+        <div class="book-publisher">Oxford University Press</div>
+        <div class="book-title">Ethical and Philosophical Dimensions</div>
+        <div class="book-year">2016</div>
+      </div>
+      <div class="book-card">
+        <div class="book-publisher">Routledge</div>
+        <div class="book-title">World Religions: A Voyage of Discovery</div>
+        <div class="book-year">2018</div>
+      </div>
+      <div class="book-card">
+        <div class="book-publisher">Routledge</div>
+        <div class="book-title">Indian Knowledge Systems <span class="forthcoming-badge">Forthcoming</span></div>
+        <div class="book-year">2025</div>
+      </div>
+    </div>
+    <p style="margin-top:2rem; font-size:0.85rem; color:var(--muted);">
+      Full bibliography at <a href="https://scholar.google.com/citations?user=nJ0N7xoAAAAJ" target="_blank" rel="noopener" style="color:var(--saffron);">Google Scholar</a>
+    </p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EXPERTISE -->
+<section>
+  <div class="section-wrap">
+    <p class="section-label">Areas of Expertise</p>
+    <h2 class="section-title">Scholarly Domains</h2>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <span class="expertise-icon">🕉️</span>
+        <div class="expertise-name">Indian Knowledge Systems</div>
+        <div class="expertise-desc">Vedic, Upanishadic, and classical Sanskrit traditions. Philosophy, epistemology, and cosmology of ancient India.</div>
+      </div>
+      <div class="expertise-item">
+        <span class="expertise-icon">⚖️</span>
+        <div class="expertise-name">Dharmic Ethics</div>
+        <div class="expertise-desc">Comparative ethics across Hindu, Jain, Buddhist, and Sikh traditions. Applied ethics in contemporary contexts.</div>
+      </div>
+      <div class="expertise-item">
+        <span class="expertise-icon">🌍</span>
+        <div class="expertise-name">Environmental Philosophy</div>
+        <div class="expertise-desc">Indigenous ecological knowledge. Ahimsa and environmental ethics. Sustainability from a Dharmic lens.</div>
+      </div>
+      <div class="expertise-item">
+        <span class="expertise-icon">🔬</span>
+        <div class="expertise-name">Science & Religion</div>
+        <div class="expertise-desc">Dialogue between modern science and classical Indian cosmological and epistemological traditions.</div>
+      </div>
+      <div class="expertise-item">
+        <span class="expertise-icon">🗺️</span>
+        <div class="expertise-name">Comparative Religion</div>
+        <div class="expertise-desc">Global religious traditions with special focus on lived experience, ritual, and community practice.</div>
+      </div>
+      <div class="expertise-item">
+        <span class="expertise-icon">🎓</span>
+        <div class="expertise-name">Liberal Arts Leadership</div>
+        <div class="expertise-desc">Curriculum design, institution building, and integration of Indian heritage into liberal arts education.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="awards-section">
+    <div class="section-wrap" style="padding-top:0; padding-bottom:2rem;">
+      <p class="section-label">Recognition</p>
+      <h2 class="section-title">Awards & Fellowships</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-year">Fulbright-Nehru</div>
+        <div class="award-name">Senior Research Fellowship</div>
+        <div class="award-body">US-India Educational Foundation</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">ICCR</div>
+        <div class="award-name">Visiting Scholar</div>
+        <div class="award-body">Indian Council for Cultural Relations</div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">AAR</div>
+        <div class="award-name">Best Book Award</div>
+        <div class="award-body">American Academy of Religion</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILES -->
+<section id="profiles">
+  <div class="section-wrap">
+    <p class="section-label">Find Me Online</p>
+    <h2 class="section-title">Academic Profiles</h2>
+    <div class="profiles-grid">
+      <a href="https://scholar.google.com/citations?user=nJ0N7xoAAAAJ" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">GS</div>
+        <div>
+          <div class="profile-link-text">Google Scholar</div>
+          <div class="profile-link-sub">Citations & publications</div>
+        </div>
+      </a>
+      <a href="https://www.researchgate.net/profile/Pankaj-Jain-5" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">RG</div>
+        <div>
+          <div class="profile-link-text">ResearchGate</div>
+          <div class="profile-link-sub">Papers & projects</div>
+        </div>
+      </a>
+      <a href="https://flame.edu.in/faculty/pankaj-jain" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">FU</div>
+        <div>
+          <div class="profile-link-text">FLAME University</div>
+          <div class="profile-link-sub">Faculty profile</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/prof-pankaj-jain" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">in</div>
+        <div>
+          <div class="profile-link-text">LinkedIn</div>
+          <div class="profile-link-sub">Professional network</div>
+        </div>
+      </a>
+      <a href="https://linktr.ee/ProfPankajJain" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">LT</div>
+        <div>
+          <div class="profile-link-text">Linktree</div>
+          <div class="profile-link-sub">All links in one place</div>
+        </div>
+      </a>
+      <a href="https://wikipedia.org/wiki/Pankaj_Jain_(scholar)" target="_blank" rel="noopener" class="profile-link">
+        <div class="profile-link-icon">WP</div>
+        <div>
+          <div class="profile-link-text">Wikipedia</div>
+          <div class="profile-link-sub">Biographical entry</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-section">
+    <div style="position:relative; z-index:2;">
+      <p class="section-label">Contact</p>
+      <h2 class="contact-title">Let's Connect</h2>
+      <p style="color:rgba(255,255,255,0.65); margin-bottom:2rem; font-size:0.95rem; position:relative;">For academic collaborations, speaking engagements, or media enquiries</p>
+      <!-- Email obfuscated against harvesters; rendered by JS -->
+      <div id="email-display" class="contact-email" onclick="revealEmail(this)" style="cursor:pointer;" title="Click to reveal email">
+        Click to reveal email ›
+      </div>
+      <div class="footer-langs">
+        <span class="lang-badge">English</span>
+        <span class="lang-badge">Hindi</span>
+        <span class="lang-badge">Sanskrit</span>
+        <span class="lang-badge">Gujarati</span>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Pankaj Jain · FLAME University, Pune, India · Built with care
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// Obfuscated email reveal (anti-harvester)
+function revealEmail(el) {
+  // Assembled at runtime so crawlers cannot extract it
+  var u = 'pankajaindia';
+  var d = 'gmail';
+  var t = 'com';
+  var addr = u + '@' + d + '.' + t;
+  el.textContent = addr;
+  el.onclick = function() { window.location.href = 'mailto:' + addr; };
+}
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) el.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.pillar, .timeline-item, .award-card, .book-card')
+  .forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
